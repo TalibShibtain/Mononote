@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MonoNote</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Lato', 'Inter', 'Helvetica', 'Arial', 'sans-serif'],
+              lato: ['Lato', 'sans-serif'],
+            },
+            colors: {
+              background: 'var(--background)',
+              foreground: 'var(--foreground)',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lato:wght@400;700&display=swap');
+      
+      :root {
+        --background: #ffffff;
+        --foreground: #000000;
+      }
+      
+      .dark {
+        --background: #000000;
+        --foreground: #ffffff;
+      }
+
+      body {
+        background-color: var(--background);
+        color: var(--foreground);
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-family: 'Lato', sans-serif;
+      }
+      
+      /* Hide scrollbar for cleaner look */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+
+      /* Editor styles */
+      [contenteditable]:empty:before {
+        content: attr(data-placeholder);
+        opacity: 0.3;
+        display: block; /* For Firefox */
+      }
+      
+      /* Ensure lists are visible in editor */
+      .editor-content ul {
+        list-style-type: disc !important;
+        padding-left: 1.5em !important;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+      .editor-content ol {
+        list-style-type: decimal !important;
+        padding-left: 1.5em !important;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+      .editor-content li {
+        display: list-item;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "react": "https://esm.sh/react@^19.2.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "jspdf": "https://esm.sh/jspdf@^3.0.4",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
+    "uuid": "https://esm.sh/uuid@^13.0.0",
+    "zustand/": "https://esm.sh/zustand@^5.0.9/",
+    "zustand": "https://esm.sh/zustand@^5.0.9"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

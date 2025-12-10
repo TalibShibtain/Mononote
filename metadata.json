@@ -1,0 +1,5 @@
+{
+  "name": "MonoNote",
+  "description": "A swiss-style minimal monochrome note-taking application focusing on flow state and simplicity.",
+  "requestFramePermissions": []
+}
